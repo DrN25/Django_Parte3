@@ -12,6 +12,15 @@
 			{{myText|upper}},
 			{{myNumber}}
 		</p>
+		<p>
+			Número incrementado: {{ myNumber|add:5 }}
+		</p>
+		<p>
+			Texto sin el caracter 'e': {{ myText|cut:"e" }}
+		</p>
+		<p>
+			Texto con primera letra mayuscula: {{ myText|capfirst}}
+		</p>
 		<ul>
 			{% for myItem in myList %}
 				<li>{{ forloop.counter }} - {{ myItem }}
