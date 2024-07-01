@@ -14,11 +14,21 @@
 		</p>
 		<ul>
 			{% for myItem in myList %}
-				<li>{{ forloop.counter }} - {{ myItem }}
+				<li>
+					{{ forloop.counter }} - {{ myItem }}
+					{% if forloop.first %}
+						- Este es el primer elemento
+					{% endif %}
+					{% if forloop.counter0 == 0 %}
+						- forloop.counter0 es 0
+					{% endif %}
+					{% if forloop.revcounter == 3 %}
+						- forloop.revcounter es 3
+					{% endif %}
 					{% if myItem == 33 %}
-						- Este numero es magico
+						- Este número es mágico
 					{% elif myItem > 50 %}
-						- Este numero es mayor que 58
+						- Este número es mayor que 50
 					{% endif %}
 				</li>
 			{% endfor %}
